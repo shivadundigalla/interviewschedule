@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+   <body>
+
+         <table>
+             <tr>
+                 <th>Username</th>
+                 <th>Status</th>
+             </tr>
+             {% for x in pending %}
+             <tr>
+            <td>{{x["username"]}}</td>
+             <td>{{x["status"]}}</td></tr>
+         {% endfor %}
+              </table>
+   </body>
+</html>

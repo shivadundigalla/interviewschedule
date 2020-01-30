@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Interview date: <input type="date" id="myDate"><br>
+
+<p>Click the button to set a date for the date field.</p>
+
+<button onclick="myFunction()">select your available date</button>
+<br>
+<br>
+Select three time slots: <input type="time" id="myTime"><br>
+<p>Click the button to set a time for at max 3 times.</p>
+
+<button onclick="myFunction1()">select your timings</button>
+<Br>
+
+
+<script>
+function myFunction() {
+  var br= document.createElement("br");
+  var txt= document.createElement("p");
+  var node=document.createTextNode("your selected date is:")
+  txt.appendChild(node);
+  var x5 = document.createElement("p");
+  var node1=document.createTextNode(document.getElementById("myDate").value)
+  x5.appendChild(node1);
+
+  var txt1= document.createElement("p");
+  var node=document.createTextNode("your selected timings are :")
+  txt1.appendChild(node);
+  var x1=document.getElementById("myDate").value;
+
+  document.body.appendChild(txt);
+  document.body.appendChild(br);
+  document.body.appendChild(x5);
+  document.body.appendChild(br);
+  document.body.appendChild(txt1);
+
+}
+function myFunction1() {
+  var br= document.createElement("br");
+
+  var x1=document.getElementById("myTime").value;
+  var x = document.createElement("p");
+  var node=document.createTextNode(x1)
+  x.appendChild(node);
+  document.body.appendChild(x);
+  document.body.appendChild(br);
+
+}
+</script>
+
+</body>
+</html>

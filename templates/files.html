@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+
+</script>
+</head>
+<body>
+
+
+
+
+<form action="/adi" name="abc" method="POST" enctype="multipart/form-data">
+ <h2> Select a file:</h2><br>
+ <input type="file" name="myFile"  accept=".csv">
+ <br><br>
+ Enter some text:
+ <br><br>
+
+
+
+ <textarea rows = "8" cols = "60" placeholder ="enter custom message" name="area">
+
+         </textarea>
+ <br><br>
+  <h3>Click submit button to submit your file</h3>
+  <input type="submit" id="button"  >
+
+    <br><br>
+</form>
+<table>
+             <tr>
+                 <th>Username</th>
+                 <th>Status</th>
+             </tr>
+             {% for x in pending %}
+             <tr>
+            <td>{{x["username"]}}</td>
+             <td>{{x["status"]}}</td>
+             </tr>
+         {% endfor %}
+              </table>
+
+<table>
+             <tr>
+                 <th>Username</th>
+                 <th>Status</th>
+             </tr>
+             {% for x in reported %}
+             <tr>
+            <td>{{x["username"]}}</td>
+             <td>{{x["status"]}}</td>
+             </tr>
+         {% endfor %}
+              </table>
+
+<table>
+             <tr>
+                 <th>Interviewer</th>
+                 <th>Candidate</th>
+                 <th>Day</th>
+                 <th>Month</th>
+                 <th>Year</th>
+                 <th>Alloted Slot</th>
+
+             </tr>
+             {% for x in fixed %}
+             <tr>
+            <td>{{x["i_name"]}}</td>
+             <td>{{x["c_username"]}}</td>
+                 <td>{{x["day"]}}</td>
+             <td>{{x["month"]}}</td>
+                 <td>{{x["year"]}}</td>
+             <td>{{x["slot"]}}</td>
+             </tr>
+         {% endfor %}
+              </table>
+
+
+</body>
+</html>
